@@ -77,7 +77,7 @@ i {
 
 /*Main page*/
 .main {
-    height: 90vh;
+    height: 80vh;
 }
 
 .main-wrapper {
@@ -96,27 +96,15 @@ i {
 .title {
     font-size: 130px;
     font-weight: 500;
-    transition: .3s ease-in-out all;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+    animation: blink 1s step-end infinite;
 }
 
-.typing {
-    width: 23ch;
-    animation: typing 2s steps(23), border .6s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    letter-spacing: 2px;
-}
-
-@keyframes typing {
-    from {
-        width: 0
-    }
-}
-
-@keyframes border {
+@keyframes blink {
+    from, to {border-color: transparent;}
     50% {
-        border-color: transparent
+        border-color: #fff;
     }
 }
 
@@ -173,6 +161,8 @@ i {
     transition: .2s ease-in all;
 }
 
+
+
 /*Sections*/
 .section {
     margin-top: 150px;
@@ -203,6 +193,7 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .section-title,
@@ -350,10 +341,6 @@ i {
         font-size: 95px;
     }
 
-    .typing {
-        width: 23.3ch;
-    }
-
     /*Sections*/
     .section-inner {
         flex-direction: column-reverse;
@@ -390,10 +377,6 @@ i {
         font-size: 75px;
     }
 
-    .typing {
-        width: 24ch;
-    }
-
     /*Section*/
     .section {
         margin-top: 20px;
@@ -409,10 +392,6 @@ i {
     /*Main page*/
     .title {
         font-size: 58px;
-    }
-
-    .typing {
-        width: 24ch;
     }
 }
 
@@ -438,10 +417,6 @@ i {
     .title {
         font-size: 48px;
     }
-
-    .typing {
-        width: 24.5ch;
-    }
 }
 
 @media screen and (max-width: 505px) {
@@ -449,10 +424,6 @@ i {
     /*Main page*/
     .title {
         font-size: 40px;
-    }
-
-    .typing {
-        width: 25ch;
     }
 }
 
@@ -477,10 +448,6 @@ i {
         font-size: 32px;
     }
 
-    .typing {
-        width: 26ch;
-    }
-
     /*Sections*/
     .names {
         font-size: 85px;
@@ -492,9 +459,5 @@ i {
     /*Main page*/
     .title {
         font-size: 26px;
-    }
-
-    .typing {
-        width: 26.5ch;
     }
 }
