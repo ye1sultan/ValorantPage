@@ -1,0 +1,143 @@
+/*Main page*/
+.dt-main {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/main-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.dt-title {
+    color: #ffffff;
+    font-size: 13vw;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/*Content*/
+.content-container {
+    padding: 0 calc(50% - 590px);
+    height: 100%;
+}
+
+.content-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-wrapper {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #131111;
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.item-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3e6580;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.item-wrapper:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.item-wrapper:after {
+    content: 'Kay/o';
+    position: absolute;
+    top: 115px;
+    left: -15%;
+    font-size: 210px;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.05)
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    width: 100%;
+    height: 220px;
+    transition: .5s ease-in-out all;
+}
+
+.item-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+}
+
+.content-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 100;
+}
+
+.item-wrapper:hover .content-wrapper {
+    height: 200px;
+}
+
+.item-title {
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #fff;
+    margin: 0;
+}
+
+.read-more {
+    text-align: center;
+    padding: 5px 25px;
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: #fa4454;
+    color: #ffffff;
+    transition: .3s ease-out all;
+}
+
+.item-wrapper:hover .read-more {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.read-more:hover {
+    box-shadow: 3px -3px 0 #ffffff;
+    transform: translate(-5px, 5px);
+}
+
+@media screen and (max-width: 679px) {
+    .dt-title {
+        font-size: 20vw;
+    }
+}

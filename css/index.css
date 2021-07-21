@@ -56,13 +56,16 @@ i {
     font-weight: 500;
     border-right: 1px solid #fff;
     padding-right: 10px;
+    white-space: nowrap;
 }
 
 @keyframes blink {
-    from, to {
+
+    from,
+    to {
         border-color: transparent;
     }
-    
+
     50% {
         border-color: #fff;
     }
@@ -243,6 +246,7 @@ i {
     padding-bottom: 65px;
     margin-top: 150px;
     background-color: white;
+    position: absolute;
 }
 
 .footer-container {
@@ -333,7 +337,7 @@ i {
     .names {
         font-size: 100px;
     }
-    
+
     /*Footer*/
     .footer {
         margin-top: 20px;
